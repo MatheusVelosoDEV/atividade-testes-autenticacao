@@ -1,0 +1,7 @@
+ID do teste;Cenário;Entrada;Resultado esperado;Resultado obtido;Status;Observações
+AUTH-01;Login válido;Usuário e senha de teste;HTTP 200 e access token;"HTTP 200; sessão retornada com access_token (token omitido)";Sucesso;"Execução confirmada no Postman em 07/11/2026; token não registrar/publicar"
+AUTH-02;Senha incorreta;E-mail de teste e senha incorreta;Erro de autenticação;"HTTP 400; invalid_credentials — Invalid login credentials";Sucesso (bloqueio esperado);Credenciais rejeitadas conforme esperado
+AUTH-03;Usuário inexistente;E-mail não cadastrado e senha de teste;Acesso negado;"HTTP 400; invalid_credentials — Invalid login credentials";Sucesso (bloqueio esperado);Usuário inexistente não autenticado
+AUTH-04;Campos vazios;E-mail e senha vazios;Erro de validação;"HTTP 400; validation_failed — missing email or phone";Sucesso (validação esperada);"Campos vazios rejeitados; resposta real registrada"
+AUTH-05;Credenciais inválidas;E-mail em formato inválido e senha inválida;Mensagem de erro;"HTTP 400; invalid_credentials — Invalid login credentials";Sucesso (bloqueio esperado);Credenciais inválidas rejeitadas
+
