@@ -13,7 +13,7 @@ Configurar um projeto Supabase, enviar requisições HTTP conhecendo endpoint, h
 - Referência do projeto: `qtbvyohakedjbnrreyd`
 - URL: `https://qtbvyohakedjbnrreyd.supabase.co`
 - Tipo de autenticação: e-mail e senha.
-- Usuário de teste: usuário de teste criado no Supabase; e-mail omitido para preservar os dados da conta.
+- Usuário de teste: usuário criado no Supabase; o e-mail aparece na captura `prints/usuariosupbase`.
 - Criação/configuração: projeto Supabase criado para a atividade e autenticação por e-mail e senha habilitada. As capturas da visão geral e do provedor de e-mail estão em `prints/`.
 - Chave de API: usar a chave pública `publishable` (`sb_publishable_...`) ou a legada `anon`. Não inserir o valor no README.
 
