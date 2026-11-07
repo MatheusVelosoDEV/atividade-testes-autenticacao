@@ -1,6 +1,6 @@
 # Testes Caixa Cinza — Autenticação Supabase
 
-> Trabalho individual. Os resultados abaixo foram registrados após a execução dos testes. Nunca publique senha, token de acesso, chave `secret`/`service_role` ou export do ambiente contendo segredos.
+> Trabalho individual. Os resultados abaixo foram registrados após a execução dos testes.
 
 ## Introdução
 Este repositório documenta testes funcionais caixa cinza da autenticação por e-mail e senha da API Supabase Auth, executados pelo Postman Desktop.
@@ -20,9 +20,9 @@ Configurar um projeto Supabase, enviar requisições HTTP conhecendo endpoint, h
 ## Configuração do Postman
 Foi utilizado o Postman Desktop. Workspace: `matheus-saraiva-veloso's Workspace`. Environment: `Supabase - Testes`.
 
-Variáveis do Environment: `base_url` = URL do projeto; `api_key` = chave pública; `email` = e-mail do usuário de teste; `password` = senha de teste. Os valores privados ficam somente no Environment local do Postman. Não exporte nem publique valores secretos.
+Variáveis do Environment: `base_url` = URL do projeto; `api_key` = chave pública; `email` = e-mail do usuário de teste; `password` = senha de teste. O Environment usado nos testes está em `postman/supabase-local.postman_environment.json`.
 
-Importe `postman/supabase-auth.postman_collection.json`. Crie no Postman o Environment `Supabase - Testes` com `base_url`, `api_key`, `email` e `password`; os valores ficam apenas no Postman local e o arquivo de Environment não é publicado. A coleção contém os cinco cenários exigidos.
+Importe `postman/supabase-auth.postman_collection.json` e `postman/supabase-local.postman_environment.json` no Postman Desktop. O Environment contém as variáveis usadas para executar os cenários. A coleção contém os cinco cenários exigidos.
 
 ## Configuração das Requisições
 - Método: `POST`
@@ -61,10 +61,11 @@ Login válido: HTTP 200 e sessão com access token. Senha incorreta, usuário in
 Os cinco cenários foram executados. A autenticação funcionou com as credenciais válidas e rejeitou as inválidas. A validação de campos vazios retornou `validation_failed`; as demais entradas inválidas retornaram `invalid_credentials`. Uma dificuldade encontrada foi corrigir a chave/URL da API antes de obter respostas válidas. Como melhoria, seria possível adicionar assertions automatizadas no Postman para status e campos JSON. Os testes caixa cinza ajudam a avaliar uma API conhecendo seus endpoints, headers e formatos sem acesso ao código interno.
 
 ## Evidências
-As capturas reais da visão geral do Supabase, configuração do provedor de e-mail, requisições do Postman e planilha estão abaixo. O token foi ocultado no print do login válido. A captura da lista de usuários foi mantida fora da publicação porque exibe o e-mail completo. Faltam uma captura da página de API Keys com o valor da chave oculto e uma captura de usuários com o e-mail oculto.
+As capturas reais da visão geral do Supabase, configuração do provedor de e-mail, lista de usuários, requisições do Postman e planilha estão abaixo. O token foi ocultado no print do login válido. As imagens de origem e cópias também foram mantidas na pasta `prints/`.
 
 - [Visão geral do projeto Supabase](prints/supabase-projeto.png)
 - [Provedor de e-mail habilitado](prints/supabase-auth-email.jpeg)
+- [Lista de usuários no Supabase](prints/usuariosupbase)
 - [Planilha preenchida](planilha/planilha-preenchida.jpeg)
 
 - [Login válido — HTTP 200](prints/WhatsApp%20Image%202026-11-07%20at%2014.20.58.jpeg)
